@@ -1,0 +1,22 @@
+<form #f="ngForm">
+  <div class="form-group">
+    <label for="name">Name</label>
+    <input name="name" id="name" type="text" #name="ngModel" [(ngModel)]="shipping.name" class="form-control" required/>
+  </div>
+  <div class="form-group">
+    <label for="addressLine1">Address</label>
+    <input name="addressLine1" id="addressLine1" type="text" #addressLine1="ngModel" [(ngModel)]="shipping.addressLine1"
+           class="form-control" required/>
+  </div>
+  <div class="form-group">
+    <label for="addressLine2"></label>
+    <input name="addressLine2" id="addressLine2" type="text" #addressLine1="ngModel" [(ngModel)]="shipping.addressLine2"
+           class="form-control" required/>
+  </div>
+  <div class="form-group">
+    <label for="city">City</label>
+    <input name="city" id="city" type="text" #city="ngModel" [(ngModel)]="shipping.city"
+           class="form-control" required/>
+  </div>
+  <button (click)="placeOrder()" class="btn btn-primary">Order</button>
+</form>
